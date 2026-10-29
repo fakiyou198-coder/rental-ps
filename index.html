@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playzone Rental PS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎮 PLAYZONE RENTAL PS</h1>
+    <p>Sistem Informasi Penyewaan PlayStation</p>
+</header>
+
+<nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#harga">Daftar Harga</a>
+    <a href="#sewa">Penyewaan</a>
+</nav>
+
+<main id="beranda">
+    <section class="kartu">
+        <h2>Selamat Datang!</h2>
+        <p>Silakan pilih PlayStation dan isi formulir
+        untuk menghitung biaya penyewaan.</p>
+    </section>
+
+    <section class="kartu" id="harga">
+        <h2>Daftar Harga Rental</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Jenis PS</th>
+                    <th>Harga per Jam</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>PS3</td>
+                    <td>Rp5.000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>PS4</td>
+                    <td>Rp10.000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>PS5</td>
+                    <td>Rp15.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="kartu" id="sewa">
+        <h2>Formulir Penyewaan</h2>
+
+        <form id="formSewa">
+            <label for="nama">Nama Penyewa</label>
+            <input type="text" id="nama"
+                   placeholder="Masukkan nama" required>
+
+            <label for="jenisPS">Pilih PlayStation</label>
+            <select id="jenisPS" required>
+                <option value="5000">PS3 - Rp5.000/jam</option>
+                <option value="10000">PS4 - Rp10.000/jam</option>
+                <option value="15000">PS5 - Rp15.000/jam</option>
+            </select>
+
+            <label for="durasi">Lama Sewa (jam)</label>
+            <input type="number" id="durasi"
+                   min="1" max="24" value="1" required>
+
+            <button type="submit">Hitung & Simpan</button>
+        </form>
+
+        <div id="hasil" aria-live="polite"></div>
+    </section>
+
+    <section class="kartu">
+        <h2>Data Penyewaan</h2>
+        <div class="tabel-scroll">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Jenis PS</th>
+                        <th>Durasi</th>
+                        <th>Total Biaya</th>
+                    </tr>
+                </thead>
+                <tbody id="dataSewa">
+                    <tr>
+                        <td colspan="4">Belum ada data penyewaan.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Playzone Rental PS</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
